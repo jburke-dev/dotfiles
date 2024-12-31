@@ -7,7 +7,8 @@ M.ProfileNames = {
     Complete = "complete",
     Minimal = "minimal",
     Git = "git",
-    Notetaking = "notetaking"
+    Notetaking = "notetaking",
+    WorkNotetaking = "work-notetaking"
 }
 
 --- @alias Profiles ProfileNames[]
@@ -34,7 +35,8 @@ local all_profiles = {
     [M.ProfileNames.Minimal] = { "opts", "mappings", "autocmds" },
     [M.ProfileNames.Complete] = { "ui", "autocmds" },
     [M.ProfileNames.Git] = {},
-    [M.ProfileNames.Notetaking] = {}
+    [M.ProfileNames.Notetaking] = {},
+    [M.ProfileNames.WorkNotetaking] = {}
 }
 
 -- from resolved_env and all_profiles, we want to return two fields on the module: -- imports, which is just a set of modules to require()
