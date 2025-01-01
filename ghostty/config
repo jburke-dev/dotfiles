@@ -1,6 +1,8 @@
 theme = tokyonight-storm
 
-keybind = ctrl+a>n=new_window
+keybind = ctrl+a>t=new_tab
+keybind = ctrl+a>n=next_tab
+keybind = ctrl+a>p=previous_tab
 keybind = ctrl+a>s=new_split:right
 keybind = ctrl+a>v=new_split:down
 keybind = ctrl+a>j=goto_split:top

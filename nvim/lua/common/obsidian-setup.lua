@@ -28,7 +28,22 @@ function M.setup(workspaces)
             end
             return updated_title
         end,
-        preferred_link_style = "markdown"
+        preferred_link_style = "markdown",
+        note_frontmatter_func = function(note)
+            if note.title then
+                local processed_title = note.title:gsub("-", " "):gsub("(%w)(%w*)", function(first, rest)
+                    return first:upper() .. rest
+                end)
+                note:add_alias(processed_title)
+            end
+            local out = { id = note.id, aliases = note.aliases, tags = note.tags }
+            if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
+                for k, v in pairs(note.metadata) do
+                    out[k] = v
+                end
+            end
+            return out
+        end
     })
     local api = require("common.api")
     api.keymap_group({
