@@ -4,7 +4,7 @@ return {
     priority = 1000,
     config = function()
         require("tokyonight").setup({
-            style = "night",
+            style = "storm",
             styles = {
                 comments = { italic = false },
                 keywords = { italic = false }
