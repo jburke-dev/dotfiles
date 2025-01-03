@@ -43,7 +43,11 @@ function M.setup(workspaces)
                 end
             end
             return out
-        end
+        end,
+        daily_notes = {
+            folder = "time-slices/daily",
+            template = "daily.md"
+        }
     })
     local api = require("common.api")
     api.keymap_group({
@@ -65,6 +69,10 @@ function M.setup(workspaces)
             {
                 shortcut = "n",
                 action = ":ObsidianNew<CR>"
+            },
+            {
+                shortcut = "d",
+                action = ":ObsidianToday<CR>"
             }
         }
     })

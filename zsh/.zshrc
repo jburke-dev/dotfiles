@@ -23,6 +23,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 source $ZSHCONF_DIR/aliases.zsh
 source $ZSHCONF_DIR/vars.zsh
 source $ZSHCONF_DIR/kroki.zsh
+source $ZSHCONF_DIR/work-aliases.zsh
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
