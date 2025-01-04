@@ -11,19 +11,15 @@ source $ZSHCONF_DIR/common/funcs.zsh
 safely_add_to_path "$HOME/.local/bin"
 export NVM_DIR="$HOME/.nvm"
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 source "${ZINIT_HOME}/zinit.zsh"
 
 source $ZSHCONF_DIR/aliases.zsh
 source $ZSHCONF_DIR/vars.zsh
 source $ZSHCONF_DIR/kroki.zsh
-source $ZSHCONF_DIR/work-aliases.zsh
+
+if [[ $ZSH_PROFILE == "work" ]]; then
+    source $ZSHCONF_DIR/work-aliases.zsh
+fi
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -44,9 +40,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # shell integrations
 eval "$(zoxide init --cmd z zsh)"
 eval "$(fzf --zsh)"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # snippets
 zinit snippet OMZP::git
