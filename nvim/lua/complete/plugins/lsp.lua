@@ -43,7 +43,6 @@ return {
         },
         sources = {
             default = { 'lsp', 'path', 'buffer', 'copilot' },
-            cmdline = {},
             providers = {
                 copilot = {
                     name = 'copilot',

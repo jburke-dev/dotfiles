@@ -24,3 +24,21 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 
 vim.opt.updatetime = 50
+
+local in_wsl = os.getenv("WSL_DISTRO_NAME") ~= nil
+
+if in_wsl then
+    vim.opt.clipboard = 'unnamedplus'
+    vim.g.clipboard = {
+        name = 'win32yank',
+        copy = {
+            ['+'] = 'win32yank.exe -i --crlf',
+            ['*'] = 'win32yank.exe -i --crlf',
+        },
+        paste = {
+            ['+'] = 'win32yank.exe -o --lf',
+            ['*'] = 'win32yank.exe -o --lf',
+        },
+        cache_enabled = 0,
+    }
+end

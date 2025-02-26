@@ -1,6 +1,5 @@
 return {
     "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "canary",
     dependencies = {
         "zbirenbaum/copilot.lua",
         "nvim-lua/plenary.nvim",
@@ -8,5 +7,12 @@ return {
     build = "make tiktoken",
     opts = {
         debug = true
-    }
+    },
+    config = function()
+        require("CopilotChat").setup({
+            highlight_headers = false,
+            separator = '---',
+            error_header = '> [!Error] Error',
+        })
+    end,
 }

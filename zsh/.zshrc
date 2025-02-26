@@ -18,7 +18,7 @@ source $ZSHCONF_DIR/vars.zsh
 source $ZSHCONF_DIR/kroki.zsh
 
 if [[ $ZSH_PROFILE == "work" ]]; then
-    source $ZSHCONF_DIR/work-aliases.zsh
+    source $ZSHCONF_DIR/work-vars.zsh
 fi
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k

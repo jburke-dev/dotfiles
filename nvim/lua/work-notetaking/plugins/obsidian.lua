@@ -10,7 +10,7 @@ return {
         require("common.obsidian-setup").setup({
             {
                 name = "Universe",
-                path = "~/universe/"
+                path = "~/Work/universe/"
             }
         })
     end
