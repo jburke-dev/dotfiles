@@ -67,7 +67,7 @@ function M.setup(workspaces)
                 action = ":ObsidianWorkspace<CR>"
             },
             {
-                shortcut = "n",
+                shortcut = "nn",
                 action = ":ObsidianNew<CR>"
             },
             {

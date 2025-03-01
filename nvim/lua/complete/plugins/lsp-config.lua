@@ -11,7 +11,8 @@ return {
                 omnisharp = require("complete.lsp.csharp"),
                 svelte = require("complete.lsp.svelte"),
                 tailwindcss = require("complete.lsp.tailwindcss"),
-                yamlls = require("complete.lsp.yamlls")
+                yamlls = require("complete.lsp.yamlls"),
+                ansiblels = require("complete.lsp.ansiblels")
             }
         }
         local lspconfig = require("lspconfig")

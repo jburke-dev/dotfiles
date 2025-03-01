@@ -15,7 +15,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 source $ZSHCONF_DIR/aliases.zsh
 source $ZSHCONF_DIR/vars.zsh
-source $ZSHCONF_DIR/kroki.zsh
 
 if [[ $ZSH_PROFILE == "work" ]]; then
     source $ZSHCONF_DIR/work-vars.zsh

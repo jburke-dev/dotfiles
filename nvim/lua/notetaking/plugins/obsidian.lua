@@ -15,6 +15,10 @@ return {
             {
                 name = "Tasks & Goals",
                 path = "~/Code/personal-life/tasks/"
+            },
+            {
+                name = "Notes",
+                path = "~/Notes/"
             }
         })
     end

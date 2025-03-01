@@ -2,7 +2,8 @@ return {
     'saghen/blink.cmp',
     lazy = false,
     dependencies = {
-        'giuxtaposition/blink-cmp-copilot'
+        'giuxtaposition/blink-cmp-copilot',
+        'mfussenegger/nvim-ansible'
     },
     version = 'v0.*',
     opts = {

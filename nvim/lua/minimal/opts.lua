@@ -42,3 +42,4 @@ if in_wsl then
         cache_enabled = 0,
     }
 end
+vim.opt.completeopt = "menu,preview,popup,noinsert"
